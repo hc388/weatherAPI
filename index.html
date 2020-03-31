@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="headtitle">Weather Today</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="js/apiweather.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/newStyles.css">
+    <link rel="stylesheet" href="css/styles-old.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+
+
+</head>
+
+<div>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30px" width="41px">Hazardeno</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html"><span
+                            class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span
+                            class="fa fa-info fa-lg"></span>
+                        About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
+                            class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./weather.html"><span
+                            class="fa fa-address-card fa-lg"></span> Weather</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
+            </div>
+        </div>
+
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                       placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1"
+                                       id="exampleInputPassword3"
+                                       placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel
+                            </button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Weather Today</h1>
+                    <p>This segment of the website displays location's weather using a web API from openweathermap!</p>
+                </div>
+                <!--
+                <div class="col-12 col-sm align-self-center">
+                    <img src="img/img.png" class="img-fluid">
+
+                    <div class="offset-4  col-sm-6 align-self-center">
+                        <a role="button" class="btn btn-block nav-link btn-warning " data-target="#reserveModal"
+                           data-toggle="modal" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
+                           data-placement="bottom"
+                           href="#reserveform">Reserve Table
+
+                        </a>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </header>
+    <div class="container1" style="padding-top: 20px;">
+
+        <!--<button type="submit" class="btn btn-primary col-md-5 submitbutton" onclick="gettingweather(document.getElementById('CityName').value)"> -->
+
+        <div class="geoType">
+            <h3>User GeoLocation Based Weather</h3>
+            Please allow location access in order to access this feature.
+            <div>
+                <h2 class="city">CityName</h2>
+                <small></small>
+                <div class="middle">
+                    <img src="" alt="icon" id="icon">
+                    <div class="degrees">
+                        <h1 id="temp">23</h1>
+                        <span>&#176;</span>
+                    </div>
+                    <h3 id="desc">Description</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1 cityType col-md-6">
+        <h3>User Query Based Weather</h3>
+
+        Enter your city below to view the current weather
+        <div id="cityForm">
+            <form action="#" onsubmit="gettingweather(document.getElementById('CityName').value);return false" id="nameform">
+                <div class="form-group">
+                    <label for="CityName">CityName</label>
+                    <input type="text" class="form-control" id="CityName" placeholder="CityName">
+                    <small class="form-text text-muted">We'll soon include dropdown support.</small>
+                </div>
+                <button type="submit" class="btn btn-primary col-md-5"><!--onclick="gettingweather(document.getElementById('CityName').value)"-->Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    </body>
+</html>
