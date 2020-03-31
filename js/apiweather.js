@@ -19,7 +19,7 @@ function updatesDOM(data){
 
 
     var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";
-    document.title = "Weather Today in "+city + iconUrl;
+    document.title = "Weather Today in "+city;
     //con = (HttpURLConnection) ( new URL(IMG_URL + icon +".png")).openConnection();
 
     $('.city').html(city);
