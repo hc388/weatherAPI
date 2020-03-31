@@ -1,7 +1,32 @@
+body{
+
+    background-color: #F8DFDB;
+    color: #000;
+    font-family: big-caslon-fb, serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+.jumbotron{
+    background-color: #F8DFDB;
+    color: #000;
+
+
+}
+nav{
+    background-color: #F7EEED; !important;
+    color: #000;
+}
+.nav-link{
+    color: #000;
+    background-color: #F7EEED; !important;
+}
+
 .container1{
+    background-color: #F7EEED; !important;
     text-align: center;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 900px;
     height: 100vh;
     /*border: 1px solid red;*/
     padding: 25px;
@@ -23,8 +48,10 @@
 }
 
 #nameform{
-    text-align: left;
+    text-align: center;
     padding-top: 40px;
+    font-weight: 500;
+
 }
 
 .city{
