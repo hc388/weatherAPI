@@ -49,7 +49,7 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                         <li class="nav-item active"><a class="nav-link" href="index.html"><span
-                                class="fa fa-address-card fa-lg"></span> Weather</a></li>
+                                class="fa fa-sun-o fa-lg"></span> Weather</a></li>
                     </ul>
                     <span class="navbar-text">
                             <a data-toggle="modal" data-target="#loginModal">
@@ -164,6 +164,19 @@
             </div>
         </div>
     </body>
+
+
+
+<script>
+    function activatePlacesSearch(){
+        var input = document.getElementById('CityName');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+    }
+
+
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYZkaeVMNqESomLAQEnR2CH3l9JBHOalE&libraries=places&callback=activatePlacesSearch"></script>
 
 <script src="js/bootstrap.min.js"></script>
 </html>
