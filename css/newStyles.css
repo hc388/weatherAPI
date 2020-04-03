@@ -30,6 +30,7 @@ nav{
     height: 100vh;
     /*border: 1px solid red;*/
     padding: 25px;
+
 }
 
 .container2{
@@ -85,4 +86,9 @@ nav{
     grid-template-columns: auto auto;
     justify-content: center;
     margin-left: 2rem;
+}
+
+#signimage{
+
+    max-width: 50%; !important;
 }
