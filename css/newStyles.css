@@ -1,5 +1,5 @@
 body{
-
+    padding-top: 60px;
     background-color: #F8DFDB;
     color: #000;
     font-family: big-caslon-fb, serif;
@@ -91,4 +91,16 @@ nav{
 #signimage{
 
     max-width: 50%; !important;
+}
+.nav-item{
+    padding-right: 10px;
+}
+@media (max-width: 1200px) {
+    .logocontainer{
+        margin: auto;
+        padding-left: 80px;
+    }
+}
+#logoimg{
+    padding-right: 20px; !important;
 }
